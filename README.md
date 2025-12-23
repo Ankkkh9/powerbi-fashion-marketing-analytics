@@ -163,11 +163,34 @@ This page provides a deep dive into **product and category performance**, combin
 ---
 
 ## 🔑 Key Insights
-- A small number of campaigns and SKUs drive the majority of Ads revenue.
-- Direct sales remain a strong revenue base, complementing paid campaigns.
-- Certain product categories consistently show higher ROAS.
-- Regional performance varies significantly, supporting targeted budget allocation.
-- Marketing efficiency metrics (CPC, CPM) reveal optimization opportunities.
+
+- **Marketing campaigns are the main revenue engine**, contributing **over 60% of total revenue**, which confirms that paid media is not just a support channel but a core growth driver.
+
+- **Revenue is highly concentrated** in a small group of campaigns and SKUs. A limited number of high-ROAS campaigns generate most Ads revenue, while many campaigns deliver low or marginal returns.
+
+- **Product selection strongly impacts campaign success**. Certain categories and SKUs consistently outperform others in Ads-driven sales, indicating that campaign efficiency depends heavily on what is being promoted, not only on spend.
+
+- **VIP and Membership customers contribute a disproportionately high share of revenue**, highlighting the importance of segmentation, retention, and remarketing strategies.
+
+- Funnel analysis shows a **notable drop-off from Click to Order**, suggesting that conversion performance is more constrained by landing experience, offer design, or targeting quality than by traffic volume.
+
+## 🎯 Recommendations
+
+- **Reallocate budget toward high-performing campaigns**
+      + Scale spend on campaigns and SKUs with consistently high ROAS.
+      + Reduce or pause campaigns with low ROAS and high CPA to improve overall efficiency.
+
+- **Build an Ads-focused product strategy**
+      + Prioritize products with strong margins and proven Ads performance.
+      + Apply bundling and cross-selling strategies to increase AOV on top-selling SKUs.
+
+- **Optimize conversion before increasing spend**
+      + Improve landing pages and messaging for campaigns with strong CTR but weak conversion.
+      + Refine audience targeting for mid-performing campaigns before scaling budgets.
+
+- **Strengthen customer value management**
+      + Design dedicated campaigns for VIP and Membership segments.
+      + Increase remarketing efforts to reduce reliance on cold traffic and improve customer lifetime value (CLV).
 
 ---
 
