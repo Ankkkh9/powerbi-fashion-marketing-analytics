@@ -86,8 +86,8 @@ This project follows a **Design Thinking approach** to ensure insights are align
 - **Prototype:** Build Power BI dashboards and data model  
 - **Review:** Refine insights and visuals based on clarity and actionability  
 
-📎 **Detailed Design Thinking file:**  
-👉 `docs/design_thinking_overview.xlsx`
+📘 **Design Thinking Workbook:**  
+[Design_Thinking_Fashion_Company.xlsx](Design_Thinking/Design_Thinking_Fashion_Company.xlsx)
 
 ---
 
