@@ -4,6 +4,11 @@
 This project analyzes **marketing performance and sales impact** for a fashion company using **Power BI**.  
 The analysis focuses on understanding **campaign effectiveness, revenue drivers, customer behavior, and product performance** to support data-driven marketing decisions.
 
+**Target Users:**
+- Marketing Manager / Growth Lead
+- Brand Manager
+- Business Owner
+
 **Industry:** Fashion Retail  
 **Tools:** Power BI, DAX  
 **Data Model:** Star Schema (Fact & Dimension tables)
@@ -18,7 +23,14 @@ The analysis focuses on understanding **campaign effectiveness, revenue drivers,
 - Support budget allocation and campaign optimization decisions
 
 ---
+## 🧭 Key Decisions Supported
 
+- Which campaigns should be **scaled, optimized, or paused**
+- Which SKUs are **Ads-ready vs not suitable for paid promotion**
+- How marketing budget should be allocated across **campaigns, products, and regions**
+- Which customer segments (VIP / Membership) should be prioritized for remarketing
+
+---
 ## 📦 Introduction to Dataset
 
 The dataset is designed to support **marketing and sales analytics** and consists of **2 fact tables** and **multiple dimension tables**.
@@ -176,21 +188,28 @@ This page provides a deep dive into **product and category performance**, combin
 
 ## 🎯 Recommendations
 
-- **Reallocate budget toward high-performing campaigns**
-      + Scale spend on campaigns and SKUs with consistently high ROAS.
-      + Reduce or pause campaigns with low ROAS and high CPA to improve overall efficiency.
+### 1. Budget Optimization
+- Scale spend on campaigns and SKUs with consistently high ROAS
+- Reduce or pause campaigns with low ROAS and high CPA
 
-- **Build an Ads-focused product strategy**
-      + Prioritize products with strong margins and proven Ads performance.
-      + Apply bundling and cross-selling strategies to increase AOV on top-selling SKUs.
+### 2. Ads-Ready Product Strategy
+- Prioritize products with strong margins and proven Ads performance
+- Apply bundling and cross-selling to increase AOV
 
-- **Optimize conversion before increasing spend**
-      + Improve landing pages and messaging for campaigns with strong CTR but weak conversion.
-      + Refine audience targeting for mid-performing campaigns before scaling budgets.
+### 3. Funnel Optimization
+- Improve landing pages and messaging for campaigns with high CTR but low conversion
+- Refine targeting for mid-performing campaigns before scaling
 
-- **Strengthen customer value management**
-      + Design dedicated campaigns for VIP and Membership segments.
-      + Increase remarketing efforts to reduce reliance on cold traffic and improve customer lifetime value (CLV).
+### 4. Customer Value Growth
+- Design dedicated campaigns for VIP and Membership segments
+- Increase remarketing to improve CLV and reduce reliance on cold traffic
+
+---
+## ⚠️ Assumptions & Limitations
+
+- The analysis focuses on available campaign and order data and does not include offline marketing activities.
+- Profit margin is not directly calculated due to missing cost-of-goods data.
+- Attribution is based on available Ads vs Direct classification and may not reflect multi-touch attribution.
 
 ---
 
@@ -199,7 +218,3 @@ This page provides a deep dive into **product and category performance**, combin
 - Integrate retention and repeat purchase tracking
 - Apply budget optimization scenarios by campaign
 - Expand to forecasting and what-if simulations
-
----
-
-## 📂 Repository Structure
