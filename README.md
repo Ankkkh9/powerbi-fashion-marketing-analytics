@@ -1,137 +1,135 @@
-# Fashion Marketing Analytics Dashboard (Power BI)
+# 👗 Power BI – Fashion Company Marketing Analytics
 
 ## 📌 Project Overview
-This project analyzes **marketing performance and customer behavior** for a fashion e-commerce company using **Power BI**.  
-The objective is to support **marketing optimization and expansion decisions** by evaluating campaign efficiency, customer engagement, conversion performance, and revenue contribution.
+This project analyzes **marketing performance and sales impact** for a fashion company using **Power BI**.  
+The analysis focuses on understanding **campaign effectiveness, revenue drivers, customer behavior, and product performance** to support data-driven marketing decisions.
 
-**Industry:** Fashion / Apparel  
-**Business Model:** Direct-to-Consumer (DTC)  
-**Tools:** Power BI, SQL, Excel  
-
----
-
-## 📂 Introduction to Dataset
-
-The dataset represents marketing and sales performance of a fashion company across multiple channels and campaigns.
-
-It combines information related to:
-- Marketing spend and campaign performance
-- Customer transactions and revenue
-- Product and customer attributes
-- Time-based performance trends
-
-The dataset is designed to simulate a real-world **marketing analytics environment**, supporting analysis across the full funnel from **ad spend → conversion → revenue**.
-
----
-
-## 🧾 Data Dictionary (Key Fields)
-
-| Category | Field | Description |
-|-------|------|------------|
-| Date | Order Date | Transaction date |
-| Marketing | Channel | Marketing channel (Paid, Organic, Social, etc.) |
-| Marketing | Campaign | Campaign identifier |
-| Marketing | Spend | Advertising cost |
-| Marketing | Impressions | Number of ad impressions |
-| Marketing | Clicks | Number of clicks |
-| Sales | Orders | Number of completed orders |
-| Sales | Revenue | Sales revenue |
-| Customer | Customer ID | Unique customer identifier |
-| Customer | Customer Type | New / Returning |
-| Product | Category | Product category |
-| Product | Sub-Category | Product sub-category |
-
-> *Note: The dataset was pre-processed to ensure consistency across time, campaign, and customer dimensions.*
+**Industry:** Fashion Retail  
+**Tools:** Power BI, DAX  
+**Data Model:** Star Schema (Fact & Dimension tables)
 
 ---
 
 ## 🎯 Business Objectives
-- Evaluate marketing spend efficiency (ROAS, CPA)
-- Identify high-performing campaigns and channels
-- Understand customer conversion behavior
-- Analyze funnel drop-offs
-- Support budget reallocation and growth decisions
+- Evaluate marketing campaign effectiveness (Ads vs Direct Sales)
+- Understand revenue contribution by product, category, and region
+- Analyze customer segments and purchasing behavior
+- Measure marketing efficiency (CPC, CPM, ROAS)
+- Support budget allocation and campaign optimization decisions
 
 ---
 
-## 🧠 Design Thinking Approach (High-Level)
+## 📦 Introduction to Dataset
 
-This project applies a **design thinking framework** to ensure the dashboard addresses real business decision needs rather than reporting metrics only.
+The dataset is designed to support **marketing and sales analytics** and consists of **2 fact tables** and **multiple dimension tables**.
 
-The approach focuses on:
-- Understanding stakeholder goals and decision constraints
-- Defining clear business questions for marketing optimization
-- Designing insight-driven dashboards
-- Iterating based on clarity and actionability
+### 🔹 Fact Tables
+1. **fact_mkt_camp_by_sku_cost**  
+   - Campaign-level performance by SKU  
+   - Includes revenue, ad cost, clicks, impressions, CPC, CPM  
 
-👉 **[View detailed Design Thinking steps](design-thinking/README.md)**
+2. **fact_order**  
+   - Order-level revenue including **Ads-driven and Direct sales**  
+   - Contains customer, product, discount, and pricing information  
+
+### 🔹 Dimension Tables
+- **dim_danh_sach_san_pham** – Product details and pricing  
+- **dim_mkt_camp_cost** – Campaign metadata and cost metrics  
+- **dim_date** – Date dimension for time analysis  
+- **dim_productcategory** – Custom product categorization  
+- **dim_region** – City-to-region mapping  
+- **dim_unique_sku_by_campaign** – Mapping SKUs to campaigns  
 
 ---
 
-## 📊 Dashboard Structure
+## 📘 Data Dictionary (Key Fields Only)
+
+| Table | Field | Type of Column |
+|------|------|----------------|
+| fact_order | Order_ID | Dimension |
+| fact_order | Order_Date | Dimension |
+| fact_order | Revenue | Measure |
+| fact_order | Discount | Measure |
+| fact_order | Customer_Level | Dimension |
+| fact_mkt_camp_by_sku_cost | Campaign_Name | Dimension |
+| fact_mkt_camp_by_sku_cost | SKU | Dimension |
+| fact_mkt_camp_by_sku_cost | Ads_Revenue | Measure |
+| fact_mkt_camp_by_sku_cost | Ads_Cost | Measure |
+| fact_mkt_camp_by_sku_cost | Clicks | Measure |
+| fact_mkt_camp_by_sku_cost | Impressions | Measure |
+| dim_danh_sach_san_pham | Product_Name | Dimension |
+| dim_danh_sach_san_pham | Category | Dimension |
+| dim_region | Region | Dimension |
+| dim_date | Date | Dimension |
+
+---
+
+## 🧩 Data Model Overview (Star Schema)
+
+This project uses a **Star Schema** to ensure performance and analytical flexibility in Power BI.  
+Two fact tables capture **sales transactions** and **marketing campaign performance**, while dimension tables provide descriptive context for **time, product, customer, and region**.  
+This structure enables efficient slicing across **campaigns, SKUs, customer segments, and geography**, while keeping DAX logic clean and scalable.
+
+### 🖼️ Power BI Data Model
+![Power BI Data Model](images/powerbi_data_model.png)
+
+---
+
+## 🧠 Design Thinking Framework
+
+This project follows a **Design Thinking approach** to ensure insights are aligned with business needs.
+
+### 🔹 Overview
+- **Empathize:** Understand marketing managers’ needs and decision constraints  
+- **Define:** Identify key marketing performance and revenue questions  
+- **Ideate:** Brainstorm metrics, segmentation, and analytical angles  
+- **Prototype:** Build Power BI dashboards and data model  
+- **Review:** Refine insights and visuals based on clarity and actionability  
+
+📎 **Detailed Design Thinking file:**  
+👉 `docs/design_thinking_overview.xlsx`
+
+---
+
+## 📊 Dashboard Pages Overview
 
 ### 1️⃣ Marketing Performance Overview
-- Total Revenue, Spend, ROAS
-- Revenue & Spend trends over time
-- Channel contribution to revenue
+- Ads Revenue vs Cost
+- ROAS, CPC, CPM
+- Campaign trend over time
+
+### 2️⃣ Product & Category Analysis
+- Revenue by product & category
+- Ads-driven vs Direct sales
+- SKU performance within campaigns
+
+### 3️⃣ Customer & Region Analysis
+- Revenue by customer level
+- Regional performance
+- City → Region aggregation
+
+### 4️⃣ Campaign Deep Dive
+- Campaign efficiency by SKU
+- Cost vs revenue contribution
+- Budget utilization
 
 ---
 
-### 2️⃣ Campaign Performance Analysis
-- Top & bottom campaigns by ROAS
-- Spend vs Revenue comparison
-- Campaign efficiency benchmarking
-
----
-
-### 3️⃣ Conversion Funnel Analysis
-- Impression → Click → Purchase
-- Conversion rates by channel
-- Funnel drop-off identification
-
----
-
-### 4️⃣ Customer Segmentation
-- New vs Returning customers
-- Average Order Value (AOV)
-- Revenue contribution by customer type
-
----
-
-## 📈 Key Insights
-
-- Marketing performance is driven by a **small number of high-ROAS campaigns**.
-- Returning customers generate **higher revenue efficiency** compared to new customers.
-- The largest conversion drop occurs between **click and purchase**, indicating optimization opportunities.
-- Increasing conversion efficiency delivers higher ROI than increasing traffic volume alone.
-
----
-
-## 🧩 Strategic Recommendations
-
-### Marketing Optimization
-- Reallocate budget toward consistently high-ROAS campaigns.
-- Reduce spend on low-efficiency campaigns with weak conversion.
-
-### Funnel Improvement
-- Optimize landing pages and checkout experience to reduce drop-offs.
-- Strengthen retargeting strategies for high-intent users.
-
-### Customer Strategy
-- Invest in retention programs for returning customers.
-- Use segmentation to personalize offers and improve AOV.
-
----
-
-## 🔑 Key Takeaways
-- Marketing efficiency matters more than raw traffic volume.
-- A small set of campaigns drives a disproportionate share of revenue.
-- Conversion optimization and retention offer the highest growth leverage.
-- Dashboards should focus on **decision support**, not just reporting.
+## 🔑 Key Insights
+- A small number of campaigns and SKUs drive the majority of Ads revenue.
+- Direct sales remain a strong revenue base, complementing paid campaigns.
+- Certain product categories consistently show higher ROAS.
+- Regional performance varies significantly, supporting targeted budget allocation.
+- Marketing efficiency metrics (CPC, CPM) reveal optimization opportunities.
 
 ---
 
 ## 🚀 Next Steps
-- Integrate cohort-based retention and CLV analysis
-- Add predictive insights for budget planning
-- Expand dashboard with real-time performance monitoring
+- Add customer lifetime value (CLV) analysis
+- Integrate retention and repeat purchase tracking
+- Apply budget optimization scenarios by campaign
+- Expand to forecasting and what-if simulations
+
+---
+
+## 📂 Repository Structure
