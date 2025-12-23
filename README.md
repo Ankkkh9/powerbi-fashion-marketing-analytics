@@ -77,88 +77,88 @@ This structure enables efficient slicing across **campaigns, SKUs, customer segm
 
 ## 🧠 Design Thinking Approach
 
-This project applies a **Design Thinking framework** to ensure the Power BI dashboards are built around **real marketing business needs**, not just visual reporting.
+This project follows a **Design Thinking framework** to ensure the Power BI dashboards are built around **real marketing decision needs**.
 
-The approach helps translate **marketing data** into **actionable insights** for decision-makers in a fashion company.
+- **Empathize:** Understand marketing stakeholders’ pain points in evaluating campaign efficiency, SKU performance, and ROI.
+- **Define:** Frame key business questions around budget allocation, product performance, and campaign effectiveness.
+- **Ideate:** Translate questions into KPIs (Revenue, Cost, ROAS, CPC, CPM) and dashboard structure.
+- **Prototype & Review:** Build an interactive Power BI model and iterate based on insight clarity and usability.
 
----
-
-### 🔍 1. Empathize — Understand Stakeholders
-- **Target users:** Marketing Manager, Brand Manager, Business Owner  
-- **Key pain points:**
-  - Difficulty evaluating **campaign effectiveness across channels**
-  - Limited visibility into **SKU-level marketing performance**
-  - Hard to connect **marketing spend → revenue → profitability**
-- **Expectation:** A clear, intuitive dashboard to support **budget allocation and campaign optimization**
-
----
-
-### 🎯 2. Define — Frame Business Problems
-From stakeholder needs, the core business questions are defined:
-- Which **campaigns and SKUs** generate the highest return?
-- How efficient is **marketing spend** by channel and region?
-- Which products should be **scaled, optimized, or paused**?
-- How does performance vary by **time, region, and category**?
-
----
-
-### 💡 3. Ideate — Metrics & Dashboard Concepts
-Key analytical ideas translated into dashboard design:
-- Funnel view: **Spend → Click → Revenue**
-- Core KPIs:
-  - Revenue, Cost, ROAS, CPC, CPM
-  - SKU-level and campaign-level performance
-- Dashboard structure:
-  - **Overview**
-  - **Campaign Performance**
-  - **Product & SKU Analysis**
-
----
-
-### 🛠️ 4. Prototype — Power BI Implementation
-- Built a **star-schema data model** for scalable analysis
-- Created calculated measures for:
-  - ROAS, Budget Utilization, Growth metrics
-- Designed interactive dashboards with:
-  - Filters by time, region, campaign, and product
-  - Drill-down from **campaign → SKU**
-
----
-
-### 🔁 5. Review — Iterate & Improve
-- Validated insights against business logic
-- Refined KPIs to better reflect **marketing effectiveness**
-- Ensured dashboards support **decision-making**, not just reporting
-
----
-
-📘 **Design Thinking – Detailed Workbook**  
+📘 **Detailed Design Thinking Workbook:**  
 👉 [Design_Thinking_Fashion_Company.xlsx](Design_Thinking/Design_Thinking_Fashion_Company.xlsx)
-
 
 ---
 
 ## 📊 Dashboard Pages Overview
 
-### 1️⃣ Marketing Performance Overview
-- Ads Revenue vs Cost
-- ROAS, CPC, CPM
-- Campaign trend over time
+### 1️⃣ Performance Overview
+This page provides a high-level view of **overall marketing performance**, focusing on revenue contribution from ads, spending efficiency, and campaign trends over time.
 
-### 2️⃣ Product & Category Analysis
-- Revenue by product & category
-- Ads-driven vs Direct sales
-- SKU performance within campaigns
+**Key metrics & visuals:**
+- Total Revenue vs Ads Revenue
+- Ads Contribution (%)
+- Total Spend & ROAS
+- Revenue trend by week, category, and region
+- Ads Revenue vs Spend by campaign
 
-### 3️⃣ Customer & Region Analysis
-- Revenue by customer level
-- Regional performance
-- City → Region aggregation
+![Marketing Overview](images/overview_dashboard.png)
 
-### 4️⃣ Campaign Deep Dive
-- Campaign efficiency by SKU
-- Cost vs revenue contribution
-- Budget utilization
+---
+
+### 2️⃣ Marketing Effectiveness
+This page evaluates **campaign efficiency and budget utilization**, helping identify high-performing and underperforming campaigns.
+
+**Key metrics & visuals:**
+- Ads Revenue, Total Spend, ROAS, CPR
+- Spend Actual vs Budget Planning
+- ROAS distribution by campaign
+- Cost vs Revenue relationship
+- % Budget Used vs ROAS
+
+![Marketing Effectiveness](images/marketing_effectiveness.png)
+
+---
+
+### 3️⃣ Performance Analysis
+This page focuses on **upper-funnel and mid-funnel performance**, analyzing traffic quality and advertising efficiency.
+
+**Key metrics & visuals:**
+- Impressions, Clicks, CTR
+- CPC, CPM, CPA
+- Marketing funnel (Impression → Click → Add to Cart → Order)
+- Top / Bottom campaigns by ROAS
+- CTR vs CPM analysis
+
+![Performance Analysis](images/performance_analysis.png)
+
+---
+
+### 4️⃣ Consumer Behavior
+This page analyzes **customer characteristics and purchasing behavior**, supporting segmentation and targeting strategies.
+
+**Key metrics & visuals:**
+- Total Customers & Orders
+- Average Age & Quantity per Customer
+- Revenue split by Membership vs VIP
+- Revenue by region and weekday
+- Age distribution and customer-level contribution
+
+![Consumer Behavior](images/consumer_behavior.png)
+
+---
+
+### 5️⃣ Product Analysis
+This page provides a deep dive into **product and category performance**, combining ads-driven and direct sales perspectives.
+
+**Key metrics & visuals:**
+- Revenue by Category & Product
+- Ads Sale vs Direct Sale comparison
+- Best-performing products
+- Product-level profitability context
+- Category performance by region
+
+![Product Analysis](images/product_analysis.png)
+
 
 ---
 
