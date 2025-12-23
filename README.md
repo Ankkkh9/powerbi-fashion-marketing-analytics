@@ -75,19 +75,66 @@ This structure enables efficient slicing across **campaigns, SKUs, customer segm
 
 ---
 
-## 🧠 Design Thinking Framework
+## 🧠 Design Thinking Approach
 
-This project follows a **Design Thinking approach** to ensure insights are aligned with business needs.
+This project applies a **Design Thinking framework** to ensure the Power BI dashboards are built around **real marketing business needs**, not just visual reporting.
 
-### 🔹 Overview
-- **Empathize:** Understand marketing managers’ needs and decision constraints  
-- **Define:** Identify key marketing performance and revenue questions  
-- **Ideate:** Brainstorm metrics, segmentation, and analytical angles  
-- **Prototype:** Build Power BI dashboards and data model  
-- **Review:** Refine insights and visuals based on clarity and actionability  
+The approach helps translate **marketing data** into **actionable insights** for decision-makers in a fashion company.
 
-📘 **Design Thinking Workbook:**  
-[Design_Thinking_Fashion_Company.xlsx](Design_Thinking/Design_Thinking_Fashion_Company.xlsx)
+---
+
+### 🔍 1. Empathize — Understand Stakeholders
+- **Target users:** Marketing Manager, Brand Manager, Business Owner  
+- **Key pain points:**
+  - Difficulty evaluating **campaign effectiveness across channels**
+  - Limited visibility into **SKU-level marketing performance**
+  - Hard to connect **marketing spend → revenue → profitability**
+- **Expectation:** A clear, intuitive dashboard to support **budget allocation and campaign optimization**
+
+---
+
+### 🎯 2. Define — Frame Business Problems
+From stakeholder needs, the core business questions are defined:
+- Which **campaigns and SKUs** generate the highest return?
+- How efficient is **marketing spend** by channel and region?
+- Which products should be **scaled, optimized, or paused**?
+- How does performance vary by **time, region, and category**?
+
+---
+
+### 💡 3. Ideate — Metrics & Dashboard Concepts
+Key analytical ideas translated into dashboard design:
+- Funnel view: **Spend → Click → Revenue**
+- Core KPIs:
+  - Revenue, Cost, ROAS, CPC, CPM
+  - SKU-level and campaign-level performance
+- Dashboard structure:
+  - **Overview**
+  - **Campaign Performance**
+  - **Product & SKU Analysis**
+
+---
+
+### 🛠️ 4. Prototype — Power BI Implementation
+- Built a **star-schema data model** for scalable analysis
+- Created calculated measures for:
+  - ROAS, Budget Utilization, Growth metrics
+- Designed interactive dashboards with:
+  - Filters by time, region, campaign, and product
+  - Drill-down from **campaign → SKU**
+
+---
+
+### 🔁 5. Review — Iterate & Improve
+- Validated insights against business logic
+- Refined KPIs to better reflect **marketing effectiveness**
+- Ensured dashboards support **decision-making**, not just reporting
+
+---
+
+📘 **Design Thinking – Detailed Workbook**  
+👉 [Design_Thinking_Fashion_Company.xlsx](Design_Thinking/Design_Thinking_Fashion_Company.xlsx)
+
 
 ---
 
