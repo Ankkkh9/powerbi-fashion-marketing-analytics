@@ -218,3 +218,12 @@ This page provides a deep dive into **product and category performance**, combin
 - Integrate retention and repeat purchase tracking
 - Apply budget optimization scenarios by campaign
 - Expand to forecasting and what-if simulations
+
+
+## 🛠️ Skills Demonstrated
+- Power BI Data Modeling (Star Schema)
+- DAX measures for marketing KPIs
+- Campaign & SKU-level performance analysis
+- Funnel analysis & conversion optimization
+- Business storytelling & dashboard design
+
